@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="路線図クイズアプリ">
+    <meta name="keywords" content="路線図クイズアプリ">
+    <title>ESAKA NAOHIRO PORTFOLIO SITE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- ヘッダー部分 -------------------->
+    <header id="header">
+        <div id="header-wrap">
+            <!-- ロゴ・タイトル -->
+            <a class="logo" href="index.html">
+                路線図クイズアプリ
+            </a>
+            <!-- ナビゲーション -->
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="privacy.html">PRIVACY</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="wrapper">
+
+        <!-- メインビジュアル -------------------->
+
+        <section id="mainvisual" class="section">
+            <div class="mainvisual">
+                <img src="images/image1.png" alt="スクリーンショット">
+                <img src="images/image2.png" alt="スクリーンショット">
+                <img src="images/image3.png" alt="スクリーンショット">
+            </div>
+        </section>
+
+
+        <!-- プロフィール -------------------->
+        <section id="profile" class="section profile">
+            <!-- 左カラム -->
+            <div class="profile_content_top">
+                <div class="profile_content_left">
+                    <h4>路線図クイズアプリ</h4>
+                    <p>概要 : </p>
+                    <p style="padding-left: 24px;">
+                        路線図クイズアプリです。<br>
+                        現在対応中の路線は以下の路線になります。<br>
+                        ・大阪メトロ 御堂筋線
+                    </p>
+                    <p>お問い合わせ : </p>
+                    <p style="padding-left: 24px;">esaka.naohiro@gmail.com</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- フッターエリア -->
+        <footer id="contact" class="footer">
+            <!-- <h4><a href="#">路線図クイズアプリ</a></h4> -->
+            <p>mail : esaka.naohiro@gmail.com</p>
+            <!--
+	<ul class="footer_share">
+		<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+		<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+		<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+	</ul>
+	-->
+            <p><small>&copy; 2023 TRAIN QUIZ</small></p>
+        </footer>
+
+    </div><!-- /.wrapper -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            // #で始まるアンカーをクリックした場合に処理
+            $('a[href^=#]').click(function () {
+                // スクロールの速度
+                var speed = 1000; // ミリ秒
+                // アンカーの値取得
+                var href = $(this).attr("href");
+                // 移動先を取得
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                // 移動先を数値で取得
+                var position = target.offset().top;
+                // スムーススクロール
+                $('body,html').animate({ scrollTop: position }, speed, 'swing');
+                return false;
+            });
+        });
+    </script>
+
+</body>
+
+</html>
